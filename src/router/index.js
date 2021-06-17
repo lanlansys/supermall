@@ -2,7 +2,7 @@
 // import VueRouter from 'vue-router'
 import {
     createRouter,
-    createWebHashHistory
+    createWebHistory
 } from 'vue-router'
 const Home = () => import('views/home/Home.vue')
 const Category = () => import('views/category/Category.vue')
@@ -35,6 +35,6 @@ const routes = [{
 
 const router = new createRouter({
     routes,
-    history: createWebHashHistory()
+    history: createWebHistory()
 })
 export default router
