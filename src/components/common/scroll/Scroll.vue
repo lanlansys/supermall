@@ -45,7 +45,7 @@
                     // console.log('上拉加载更多');
                     this.$emit('pullingUp')
                 })
-
+                console.log(this.scroll);
             });
         },
         methods: {

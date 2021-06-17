@@ -8,7 +8,7 @@
 
 
     <scroll class="content" ref="scroll" @scroll="contentScroll" :probe-type="3" :pull-up-load="true"
-      @pullingUp="loadMore" @load="imageLoad">
+      @pullingUp="loadMore">
       <home-swiper :banners="banners"></home-swiper>
       <recommend-view :recommends="recommends"></recommend-view>
       <feature-view></feature-view>
@@ -79,6 +79,10 @@
       this.getHomeGoods('pop')
       this.getHomeGoods('new')
       this.getHomeGoods('sell')
+      // 监听item中图片加载完成
+      this.$bus.$on('imageItemLoad', () => {
+        console.log('----');
+      })
     },
     computed: {
       showGoods() {
